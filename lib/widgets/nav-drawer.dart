@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:study_guide_app/main.dart';
+import 'package:study_guide_app/pages/hilfe.dart';
+import 'package:study_guide_app/pages/startseite.dart';
+import 'package:study_guide_app/pages/veranstaltungen.dart';
+import 'package:study_guide_app/pages/ressourcen.dart';
 
 class NavDrawer extends StatelessWidget {
   const NavDrawer({super.key});
