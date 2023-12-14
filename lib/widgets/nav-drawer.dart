@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:study_guide_app/main.dart';
 
 class NavDrawer extends StatelessWidget {
   const NavDrawer({super.key});
@@ -21,19 +22,32 @@ class NavDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: const Icon(Icons.info),
-            title: const Text('Information'),
-            onTap: () => {},
+            leading: const Icon(Icons.start),
+            title: const Text('Startseite'),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const Startseite()),);
+              },
           ),
           ListTile(
-            leading: const Icon(Icons.comment),
-            title: const Text('Kommunikation'),
-            onTap: () => {Navigator.of(context).pop()},
+            leading: const Icon(Icons.info),
+            title: const Text('Veranstaltungen'),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const Veranstaltungen()),);
+              },
           ),
           ListTile(
             leading: const Icon(Icons.border_color),
             title: const Text('Ressourcen'),
-            onTap: () => {Navigator.of(context).pop()},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const Ressourcen()),);
+              },
+          ),
+          ListTile(
+            leading: const Icon(Icons.help),
+            title: const Text('Hilfe und Unterstützung'),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const HilfeUndUnterstutzung()),);
+              },
           ),
         ],
       ),
