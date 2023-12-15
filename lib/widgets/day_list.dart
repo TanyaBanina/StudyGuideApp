@@ -13,22 +13,22 @@ class DayList extends StatefulWidget {
 
 class _DayListState extends State<DayList> {
 
-  List<String> weekdays = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
+  List<String> weekdays = ["MON", "DIE", "MIT", "DON", "FRE", "SAM", "SON"];
 
   Color activeCardColor = Colors.white;
-  Color inactiveCardColor = Colors.black26;
+  Color inactiveCardColor = Colors.black45;
 
   Color activeTextColor = Colors.black;
   Color inactiveTextColor = Colors.white;
 
   List<List<Color>> cardColorList = [
-    [Colors.black26, Colors.white],
-    [Colors.black26, Colors.white],
-    [Colors.black26, Colors.white],
-    [Colors.black26, Colors.white],
-    [Colors.black26, Colors.white],
-    [Colors.black26, Colors.white],
-    [Colors.black26, Colors.white],
+    [Colors.black45, Colors.white],
+    [Colors.black45, Colors.white],
+    [Colors.black45, Colors.white],
+    [Colors.black45, Colors.white],
+    [Colors.black45, Colors.white],
+    [Colors.black45, Colors.white],
+    [Colors.black45, Colors.white],
   ];
 
   late DateTime date;

@@ -15,7 +15,7 @@ class NavDrawer extends StatelessWidget {
         children: <Widget>[
           const DrawerHeader(
             decoration: BoxDecoration(
-                color: Colors.green,
+                color: Color.fromARGB(255,24, 44, 100),
                 /*image: DecorationImage(
                     fit: BoxFit.fill,
                     image: AssetImage('assets/images/.jpg'))*/),

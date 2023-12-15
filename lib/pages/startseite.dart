@@ -18,17 +18,17 @@ class _StartseiteState extends State<Startseite> {
 
   List<String> dayDependentTodos = [];
 
-  List<String> Event = [
+  List<String> events = [
     "MON,TEST1,TEST1",
-    "WED,TEST2,TEST2",
-    "SUN,TEST3,TEST3",
-    "WED,TEST4,TEST4",
-    "FRI,TEST5,TEST5",
-    "THU,TEST6,TEST6",
+    "MIT,TEST2,TEST2",
+    "SON,TEST3,TEST3",
+    "MIT,TEST4,TEST4",
+    "FRE,TEST5,TEST5",
+    "DON,TEST6,TEST6",
     "MON,TEST7,TEST7",
-    "TUE,TEST8,TEST8",
-    "TUE,TEST9,TEST9",
-    "TUE,TEST10,TEST10",
+    "DIE,TEST8,TEST8",
+    "DIE,TEST9,TEST9",
+    "DIE,TEST10,TEST10",
   ];
 
   String weekday = "";
@@ -51,30 +51,34 @@ class _StartseiteState extends State<Startseite> {
     setState(() {
       weekday = newDay;
     });
-    print("changed, $weekday");
-
     updateList();
   }
 
   void updateList() {
     dayDependentTodos.clear();
-    for (int i = 0; i < Event.length; i++) {
-      if (Event[i].split(",")[0] == weekday) {
-        dayDependentTodos.add(Event[i]);
+    for (int i = 0; i < events.length; i++) {
+      if (events[i].split(",")[0] == weekday) {
+        dayDependentTodos.add(events[i]);
       }
     }
+  }
+
+  void deleteEvent(int index) {
+    setState(() {
+      events.removeAt(index);
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavDrawer(),//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      backgroundColor: Colors.deepPurpleAccent,
+      drawer: const NavDrawer(),
+      backgroundColor: const Color.fromARGB(255,24, 44, 100),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.deepPurpleAccent,
+        backgroundColor: const Color.fromARGB(255,24, 44, 100),
         elevation: 0.0,
-        title: const Text("MY TODOS"),
+        title: const Text("Mein UNI-Tag"),
       ),
       body: Column(
         children: [
@@ -89,7 +93,7 @@ class _StartseiteState extends State<Startseite> {
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(30), topRight: Radius.circular(30)),
                 boxShadow: [BoxShadow(blurRadius: 10.0)]
               ),
-              child: EventView(todoList: dayDependentTodos,),
+              child: EventView(todoList: dayDependentTodos, bigList: events),
             ),
           ),
         ],
@@ -104,9 +108,9 @@ class _StartseiteState extends State<Startseite> {
           ).then((value) {
             setState(() {
               if (descriptionController.text == "" || titleController.text == "") {
-                showInSnackBar("Title or description can't be empty!");
+                showInSnackBar("Titel oder Beschreibung dürfen nicht leer sein!");
               } else {
-                Event.add("$weekday,${titleController.text},${descriptionController.text}");
+                events.add("$weekday,${titleController.text},${descriptionController.text}");
                 updateList();
                 titleController.clear();
                 descriptionController.clear();
@@ -116,9 +120,10 @@ class _StartseiteState extends State<Startseite> {
         },
         splashColor: Colors.deepPurple,
         shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(15))),
-        backgroundColor: Colors.deepPurpleAccent,
-        child: const Icon(Icons.add, size: 50,),
+        backgroundColor: const Color.fromARGB(255,24, 44, 100),
+        child: const Icon(Icons.add, size: 50,color: Colors.white,),
       ),
+
     );
   }
 }
