@@ -78,7 +78,7 @@ class _DayListState extends State<DayList> {
                   borderRadius: const BorderRadius.all(Radius.circular(10))
               ),
               child: Center(
-                child: Text(weekdays[index], style: TextStyle(fontSize: 18, color: cardColorList[index][1], fontWeight: FontWeight.bold),),
+                child: Text(weekdays[index], style: TextStyle(fontSize: 17, color: cardColorList[index][1], fontWeight: FontWeight.bold),),
               ),
             ),
           );

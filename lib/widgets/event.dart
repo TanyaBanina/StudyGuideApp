@@ -38,7 +38,7 @@ class _EventState extends State<Event> {
                 style: const TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
-                  fontSize: 18,
+                  fontSize: 20,
                 ),
                 textAlign: TextAlign.left,
               ),
@@ -49,7 +49,7 @@ class _EventState extends State<Event> {
                 widget.description,
                 style: const TextStyle(
                   color: Colors.black,
-                  fontSize: 15,
+                  fontSize: 18,
                 ),
                 textAlign: TextAlign.left,
               ),
