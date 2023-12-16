@@ -9,10 +9,17 @@ class Ressourcen extends StatelessWidget {
     return Scaffold(
       drawer: const NavDrawer(),
       appBar: AppBar(
-        title: const Text('Ressourcen'),
+        backgroundColor: const Color.fromARGB(255,24, 44, 100),
+        iconTheme: const IconThemeData(
+            color: Colors.white,
+          ),
+        title: const Text('Ressourcen', style: TextStyle(color: Colors.white),),
       ),
       body: const Center(
-        child: Text('тут лінки на опал, джехам та інші'),
+        child: Padding(
+              padding: EdgeInsets.only(left: 20.0, right: 20.0, top: 0),
+              child: Text('https://bildungsportal.sachsen.de/opal/shiblogin?6', style: TextStyle(fontSize: 20),),
+        ),
       ),
     );
   }

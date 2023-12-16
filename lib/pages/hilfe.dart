@@ -9,10 +9,17 @@ class HilfeUndUnterstutzung extends StatelessWidget {
     return Scaffold(
       drawer: const NavDrawer(),
       appBar: AppBar(
-        title: const Text('Hilfe und Unterstützung'),
+        backgroundColor: const Color.fromARGB(255,24, 44, 100),
+        iconTheme: const IconThemeData(
+            color: Colors.white,
+          ),
+        title: const Text('Hilfe und Unterstützung', style: TextStyle(color: Colors.white),),
       ),
       body: const Center(
-        child: Text('тут лінки на телефонні номери, студіенрат, студентенверк тощо'),
+        child: Padding(
+              padding: EdgeInsets.only(left: 20.0, right: 20.0, top: 0),
+              child: Text('Um die Veranstaltung zu löschen, doppelklicken Sie darauf.', style: TextStyle(fontSize: 20),),
+        ),
       ),
     );
   }

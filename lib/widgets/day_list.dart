@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
+//this widget creates an interactable list of weekdays
 class DayList extends StatefulWidget {
 
   final Function dayUpdateFunction;
-
   const DayList({Key? key, required this.dayUpdateFunction}) : super(key: key);
 
   @override
@@ -48,7 +48,8 @@ class _DayListState extends State<DayList> {
   @override
   void initState() {
     super.initState();
-    SchedulerBinding.instance!.addPostFrameCallback((_) {
+    //this sets the day to current day, when user opens the app
+    SchedulerBinding.instance.addPostFrameCallback((_) {
       date = DateTime.now();
       widget.dayUpdateFunction(weekdays[date.weekday - 1]);
       updateDayColor(date.weekday - 1);

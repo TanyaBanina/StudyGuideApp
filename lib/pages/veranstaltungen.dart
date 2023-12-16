@@ -9,10 +9,17 @@ class Veranstaltungen extends StatelessWidget {
     return Scaffold(
       drawer: const NavDrawer(),
       appBar: AppBar(
-        title: const Text('Veranstaltungen'),
+        backgroundColor: const Color.fromARGB(255,24, 44, 100),
+        iconTheme: const IconThemeData(
+            color: Colors.white,
+          ),
+        title: const Text('Veranstaltungen', style: TextStyle(color: Colors.white),),
       ),
       body: const Center(
-        child: Text('тут можна усіляку інфу про те що в уніку відбувається писати'),
+        child: Padding(
+              padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 0),
+              child: Text('Ferien vom 21.12 bis 03.01.', style: TextStyle(fontSize: 25),),
+        ),
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//this widget is responsible for a single event structure
 class Event extends StatefulWidget {
   final String title;
   final String description;
@@ -20,7 +21,7 @@ class _EventState extends State<Event> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onDoubleTap: widget.onDoubleTap, // Handle double tap here
+      onDoubleTap: widget.onDoubleTap,
       child: Container(
         margin: const EdgeInsets.only(top: 10, left: 10, right: 10),
         decoration: const BoxDecoration(

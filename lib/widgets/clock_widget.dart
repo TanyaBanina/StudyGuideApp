@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
+//this widget shows time and date
 class ClockWidget extends StatelessWidget {
   const ClockWidget({super.key});
 

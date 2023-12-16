@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
+//this widget creates a popup, when user presses the add event button
 class EventPopup extends StatefulWidget {
   final TextEditingController descriptionController;
   final TextEditingController titleController;
-
   const EventPopup({Key? key, required this.titleController, required this.descriptionController}) : super(key: key);
-
 
   @override
   _EventPopupState createState() => _EventPopupState();
@@ -15,7 +14,7 @@ class _EventPopupState extends State<EventPopup> {
   @override
   Widget build(BuildContext context) {
     return Dialog(
-      backgroundColor: const Color.fromARGB(51,101,145,255),
+      backgroundColor: const Color.fromARGB(255,51,101,145),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       elevation: 20,
       child: SingleChildScrollView(
