@@ -1,6 +1,7 @@
 # study_guide_app
 
-EMI
+![Screenshot_1702832646](https://github.com/TanyaBanina/StudyGuideApp/assets/115241739/53680427-b242-422d-b87c-2296b3a665e1)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
